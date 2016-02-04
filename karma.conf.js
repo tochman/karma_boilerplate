@@ -10,25 +10,34 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine-jquery','jasmine'],
+    frameworks: ['jasmine-jquery', 'jasmine'],
 
 
     // list of files / patterns to load in the browser
     files: [
+      'https://code.jquery.com/jquery-2.1.4.js',
       'assets/js/**/*.js',
-      'spec/**/*_spec.js'
+      'spec/**/*_spec.js', {
+        pattern: '/*.html',
+        included: false,
+        served: true
+      }
     ],
+
+    plugins: [ // !IMPORTANT
+      'karma-chrome-launcher',
+      'karma-jasmine'
+    ],
+
 
 
     // list of files to exclude
-    exclude: [
-    ],
+    exclude: [],
 
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-    preprocessors: {
-    },
+    preprocessors: {},
 
 
     // test results reporter to use
