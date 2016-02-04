@@ -1,0 +1,34 @@
+{
+  "name": "karma_boilerplate",
+  "version": "0.0.1",
+  "description": "Boilerplate for JavaScript projects with testing framework",
+  "main": "karma.conf.js",
+  "scripts": {
+    "test": "karma start karma.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tochman/karma_boilerplate.git"
+  },
+  "keywords": [
+    "Karma",
+    "Jasmine",
+    "JavaScript",
+    "TDD",
+    "BDD"
+  ],
+  "author": "@tochman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tochman/karma_boilerplate/issues"
+  },
+  "homepage": "https://github.com/tochman/karma_boilerplate",
+  "devDependencies": {
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.19",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-coveralls": "^1.1.2",
+    "karma-jasmine": "^0.3.7",
+    "karma-jasmine-jquery": "^0.1.1"
+  }
+}
