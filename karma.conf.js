@@ -24,23 +24,34 @@ module.exports = function(config) {
       }
     ],
 
-
-
-
-
     // list of files to exclude
     exclude: [],
 
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-    preprocessors: {},
+    //preprocessors: {},
 
+    //preprocessors: {
+    //  "assets/**/*js": "coverage"
+    //},
 
-    // test results reporter to use
-    // possible values: 'dots', 'progress'
-    // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    coverageReporter: {
+      type: "lcov",
+      dir: "coverage/"
+    },
+
+    plugins: [
+        'karma-chrome-launcher',
+        'karma-coverage',
+        'karma-coveralls',
+        'karma-jasmine',
+        'karma-jasmine-jquery'
+      ],
+      // test results reporter to use
+      // possible values: 'dots', 'progress'
+      // available reporters: https://npmjs.org/browse/keyword/karma-reporter
+    reporters: ['progress', 'coverage', 'coveralls'],
 
 
     // web server port
@@ -71,6 +82,17 @@ module.exports = function(config) {
 
     // Concurrency level
     // how many browser should be started simultaneous
-    concurrency: Infinity
+    concurrency: Infinity,
+
+    //  Custom launcher for Travis-CI
+    customLaunchers: {
+      chromeTravisCI: {
+        base: 'Chrome',
+        flags: ['--no-sandbox']
+      }
+    }
   })
+  if(process.env.TRAVIS) {
+    config.browsers = ['chromeTravisCI'];
+  }
 }
