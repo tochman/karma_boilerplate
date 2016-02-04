@@ -1,6 +1,6 @@
 describe('FizzBuzz - index.html', function() {
   beforeEach(function() {
-    jasmine.getFixtures().fixturesPath = '.';
+    jasmine.getFixtures().fixturesPath = 'base/';
     loadFixtures('index.html');
     $.holdReady(false);
   });
