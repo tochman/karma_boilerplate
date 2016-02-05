@@ -7,7 +7,8 @@ module.exports = function(config) {
     frameworks: ['jasmine-jquery', 'jasmine'],
     // list of files / patterns to load in the browser
     files: [
-      'https://code.jquery.com/jquery-2.1.4.js',
+      //'https://code.jquery.com/jquery-2.1.4.js',
+      'assets/js/jquery-2.1.1.min.js',
       'assets/js/**/*.js',
       'spec/**/*_spec.js', {
         pattern: 'spec/fixtures/**/*.html',
@@ -25,7 +26,8 @@ module.exports = function(config) {
     //preprocessors: {},
 
     preprocessors: {
-      "assets/**/*js": "coverage"
+      "assets/**/*js": "coverage",
+      '**/*.html': []
     },
 
     coverageReporter: {
