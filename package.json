@@ -30,6 +30,7 @@
     "karma-coverage": "latest",
     "karma-coveralls": "latest",
     "karma-jasmine": "latest",
-    "karma-jasmine-jquery": "latest"
+    "karma-jasmine-jquery": "latest",
+    "karma-spec-reporter": "0.0.23"
   }
 }
