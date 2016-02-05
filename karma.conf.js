@@ -3,16 +3,8 @@
 
 module.exports = function(config) {
   config.set({
-
-    // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
-
-
-    // frameworks to use
-    // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['jasmine-jquery', 'jasmine'],
-
-
     // list of files / patterns to load in the browser
     files: [
       'https://code.jquery.com/jquery-2.1.4.js',
@@ -32,9 +24,9 @@ module.exports = function(config) {
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     //preprocessors: {},
 
-    //preprocessors: {
-    //  "assets/**/*js": "coverage"
-    //},
+    preprocessors: {
+      "**/*js": "coverage"
+    },
 
     coverageReporter: {
       type: "lcov",
@@ -42,15 +34,15 @@ module.exports = function(config) {
     },
 
     plugins: [
-        'karma-chrome-launcher',
-        'karma-coverage',
-        'karma-coveralls',
-        'karma-jasmine',
-        'karma-jasmine-jquery'
-      ],
-      // test results reporter to use
-      // possible values: 'dots', 'progress'
-      // available reporters: https://npmjs.org/browse/keyword/karma-reporter
+      'karma-chrome-launcher',
+      'karma-coverage',
+      'karma-coveralls',
+      'karma-jasmine',
+      'karma-jasmine-jquery'
+    ],
+    // test results reporter to use
+    // possible values: 'dots', 'progress'
+    // available reporters: https://npmjs.org/browse/keyword/karma-reporter
     reporters: ['progress', 'coverage', 'coveralls'],
 
 
@@ -92,7 +84,7 @@ module.exports = function(config) {
       }
     }
   })
-  if(process.env.TRAVIS) {
+  if (process.env.TRAVIS) {
     config.browsers = ['chromeTravisCI'];
   }
 }
