@@ -27,6 +27,7 @@
     "jasmine-core": "^2.4.1",
     "karma": "latest",
     "karma-chrome-launcher": "latest",
+    "karma-phantomjs-launcher": "latest",
     "karma-coverage": "latest",
     "karma-coveralls": "latest",
     "karma-jasmine": "latest",

@@ -78,14 +78,13 @@ module.exports = function(config) {
     concurrency: Infinity,
 
     //  Custom launcher for Travis-CI
-    customLaunchers: {
-      chromeTravisCI: {
-        base: 'Chrome',
-        flags: ['--no-sandbox']
-      }
-    }
+
   })
   if (process.env.TRAVIS) {
-    config.browsers = ['chromeTravisCI'];
+    config.set({
+      browsers = ['PhantomJS'],
+      captureTimeout: 30000,
+  		singleRun: true
+    })		
   }
 }
