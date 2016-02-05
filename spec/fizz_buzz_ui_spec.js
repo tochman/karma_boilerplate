@@ -20,6 +20,10 @@ describe('FizzBuzz - index.html', function() {
       $('#number').val('3');
       $('#run').trigger('click');
       expect($('#display_message').text()).toBe('3 returns: Fizz');
+
+      $('#number').val('4');
+      $('#run').trigger('click');
+      expect($('#display_message').text()).toBe('4 returns: 4');
     });
 
     xit("displays FizzBuzz if value is divisible with 15", function() {
