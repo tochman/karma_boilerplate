@@ -25,12 +25,14 @@ describe('FizzBuzz - index.html', function() {
       $('#number').val('3');
       $('#run').trigger('click');
       expect($('#display_message').text()).toBe('3 returns: Fizz');
-    });
 
-    it("displays number if value is not divisible by 3, 5 or 15", function() {
       $('#number').val('4');
       $('#run').trigger('click');
       expect($('#display_message').text()).toBe('4 returns: 4');
+    });
+
+    xit("displays number if value is not divisible by 3, 5 or 15", function() {
+
     });
 
   });
