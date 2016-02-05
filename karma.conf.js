@@ -10,7 +10,7 @@ module.exports = function(config) {
       'https://code.jquery.com/jquery-2.1.4.js',
       'assets/js/**/*.js',
       'spec/**/*_spec.js', {
-        pattern: '*.html',
+        pattern: 'spec/fixtures/**/*.html',
         included: false,
         served: true
       }

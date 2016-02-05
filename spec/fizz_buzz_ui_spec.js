@@ -1,7 +1,7 @@
 describe('FizzBuzz - index.html', function() {
 
   beforeEach(function() {
-    jasmine.getFixtures().fixturesPath = 'base/';
+    jasmine.getFixtures().fixturesPath = 'base/spec/fixtures';
     loadFixtures('partial.html');
     $.holdReady(false);
   });
@@ -32,7 +32,9 @@ describe('FizzBuzz - index.html', function() {
     });
 
     xit("displays number if value is not divisible by 3, 5 or 15", function() {
-
+      $('#number').val('4');
+      $('#run').trigger('click');
+      expect($('#display_message').text()).toBe('4 returns: 4');
     });
 
   });
