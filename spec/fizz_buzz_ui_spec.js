@@ -6,12 +6,17 @@ describe('FizzBuzz - index.html', function() {
     $.holdReady(false);
   });
 
+  afterEach(function() {
+    jasmine.getFixtures().cleanUp();
+  })
+
   describe("lets user check values", function() {
     it("displays Fizz if value is divisible with 3", function() {
 
       $('#number').val('5');
       $('#run').trigger('click');
       expect($('#display_message').text()).toBe('5 returns: Buzz');
+
 
       $('#number').val('15');
       $('#run').trigger('click');
@@ -20,20 +25,14 @@ describe('FizzBuzz - index.html', function() {
       $('#number').val('3');
       $('#run').trigger('click');
       expect($('#display_message').text()).toBe('3 returns: Fizz');
+    });
 
+    it("displays number if value is not divisible by 3, 5 or 15", function() {
       $('#number').val('4');
       $('#run').trigger('click');
       expect($('#display_message').text()).toBe('4 returns: 4');
     });
 
-    xit("displays FizzBuzz if value is divisible with 15", function() {
-
-    });
-
   });
 
-
-  afterEach(function() {
-    //cleanUp();
-  });
 });
