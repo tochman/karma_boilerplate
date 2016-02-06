@@ -1,4 +1,6 @@
 ## JS Test Boilerplate 0.1 (WIP)
+[![Build Status](https://travis-ci.org/CraftAcademy/karma-jquery-jasmine_boilerplate.svg?branch=master)](https://travis-ci.org/CraftAcademy/karma-jquery-jasmine_boilerplate)
+[![Coverage Status](https://coveralls.io/repos/github/CraftAcademy/karma-jquery-jasmine_boilerplate/badge.svg?branch=master)](https://coveralls.io/github/CraftAcademy/karma-jquery-jasmine_boilerplate?branch=master)
 
 ####Dependencies
 * [Jasmine](https://github.com/jasmine/jasmine)
@@ -11,7 +13,7 @@
   - [Karma Spec Reporter](https://github.com/mlex/karma-spec-reporter)
 
 ####Services
-* [Travis](https://travis-ci.org/) for Continious Integration
+* [Travis](https://travis-ci.org/) for Continuous Integration
 * [Coveralls](https://coveralls.io/) for Test Coverage
 
 ####Set up
